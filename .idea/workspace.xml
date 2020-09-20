@@ -19,7 +19,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ComplainManagementSystem" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -31,6 +32,8 @@
       <updated>1600102778200</updated>
       <workItem from="1600102780600" duration="72000" />
       <workItem from="1600153540466" duration="204000" />
+      <workItem from="1600588545895" duration="427000" />
+      <workItem from="1600589168993" duration="453000" />
     </task>
     <servers />
   </component>
@@ -38,9 +41,14 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="223" key="FileChooserDialogImpl" timestamp="1600102811867">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state x="521" y="239" key="FileChooserDialogImpl" timestamp="1600589621047">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="463" y="223" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1600102811867" />
+    <state x="521" y="239" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600589621047" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1600588749446">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600588749446" />
   </component>
 </project>
