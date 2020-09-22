@@ -26,6 +26,7 @@ urlpatterns = [
     path('studentForm/', student_view.studentForm),
     path('complainForm/', complain_view.complainForm),
     path('commentForm/', complain_view.commentForm),
+    path('voteForm/', complain_view.voteForm),
     path('tagForm/', tag_views.insertTag),
     path('complainTagForm/', tag_views.insertComplainTag)
 ]

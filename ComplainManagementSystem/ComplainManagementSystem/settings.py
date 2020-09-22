@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Student.apps.StudentConfig',
     'Complain.apps.ComplainConfig',
-    'Tag.apps.TagConfig'
+    'Tag.apps.TagConfig',
+    'InfoNContact.apps.InfoncontactConfig',
 ]
 
 MIDDLEWARE = [

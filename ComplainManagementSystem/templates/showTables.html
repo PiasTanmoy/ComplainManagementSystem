@@ -59,7 +59,7 @@
     <h1>Comment Table</h1>
     <table border="1">
         <tr>
-           <th>Complain_ID</th>
+           <th>Complain</th>
            <th>User Name</th>
            <th>Description</th>
         </tr>
@@ -72,6 +72,34 @@
     {% endfor %}
 
     </table>
+
+
+
+    <br><br><br><br><br>
+
+    <h1>Vote Table</h1>
+    <table border="1">
+        <tr>
+           <th>Complain</th>
+           <th>Student_ID</th>
+           <th>Upvote</th>
+           <th>Downvote</th>
+        </tr>
+    {% for s in votTable %}
+        <tr>
+            <td>{{s.complain}}</td>
+            <td>{{ s.student }}</td>
+            <td>{{ s.upvote }}</td>
+            <td>{{ s.downvote }}</td>
+        </tr>
+    {% endfor %}
+
+
+    </table>
+
+
+
+
     <br><br><br><br><br>
 
     <h1>Info Table</h1>

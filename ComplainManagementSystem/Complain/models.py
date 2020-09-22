@@ -16,6 +16,7 @@ class Complain(models.Model):
     def __str__(self):
         return str(self.id) + ' : ' + self.student.user_name
 
+
 class Comment(models.Model):
     complain = models.ForeignKey(Complain, on_delete=models.CASCADE)
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
@@ -24,5 +25,20 @@ class Comment(models.Model):
 
     def __str__(self):
         return str(self.complain.id) + ':' + self.student.user_name
+
+
+class Vote(models.Model):
+    complain = models.ForeignKey(Complain,on_delete=models.CASCADE)
+    student = models.ForeignKey(Student,on_delete=models.CASCADE)
+    upvote = models.BooleanField(default=False,null=True)
+    downvote = models.BooleanField(default=False,null=True)
+
+    class Meta:
+        unique_together = ('complain','student')
+
+    def __str__(self):
+        return str(self.complain.id) +' : '+self.student.user_name
+
+
 
 

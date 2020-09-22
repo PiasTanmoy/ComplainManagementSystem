@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .ComplainForm import ComplainForm
 from .CommentForm import CommentForm
+from .VoteForm import VoteForm
 # Create your views here.
 
 def complainForm(request):
@@ -43,3 +44,24 @@ def commentForm(request):
         'msg': msg
     }
     return render(request, 'Complain/CommentForm.html', context)
+
+
+def voteForm(request):
+    vote_form = VoteForm()
+    msg = ''
+
+    if request.method == 'POST':
+        vote_form = VoteForm(request.POST)
+        msg = 'Invalid input'
+
+        if vote_form.is_valid():
+            vote_form.save()
+            msg = 'Insertion done!'
+            vote_form = VoteForm()
+
+    context = {
+        'vote_form': vote_form,
+        'msg': msg
+    }
+    return render(request, 'Complain/VoteForm.html', context)
+
