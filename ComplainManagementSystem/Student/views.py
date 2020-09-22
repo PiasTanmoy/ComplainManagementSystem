@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Student
 from .studentForm import StudentForm
 from Complain.models import Complain,Comment
+from Tag.models import Tag, ComplainTag
 # Create your views here.
 
 
@@ -10,11 +11,16 @@ def showTables(request):
     studentTable = Student.objects.all()
     complainTable = Complain.objects.all()
     commentTable = Comment.objects.all()
+    tagTable = Tag.objects.all()
+    complainTag = ComplainTag.objects.all()
+
 
     context = {
         'studentTable': studentTable,
         'complainTable': complainTable,
         'commentTable': commentTable,
+        'tagTable': tagTable,
+        'complainTag': complainTag
     }
 
     return render(request, 'showTables.html', context)

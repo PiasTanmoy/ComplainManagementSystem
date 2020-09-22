@@ -7,6 +7,7 @@
 </head>
 <body>
 {% block content %}
+
     <h1>Student Table</h1>
     <table border="1">
         <tr>
@@ -72,9 +73,38 @@
 
     </table>
 
-{% endblock content %}
+    <h1>Tag Table</h1>
+    <table border="1">
+        <tr>
+
+            <th>Tag Name</th>
+        </tr>
+    {% for t in tagTable %}
+        <tr>
+
+            <td>{{ t.tag_name }}</td>
+        </tr>
+    {% endfor %}
+
+    </table>
+
+    <h1>Complain Tag</h1>
+    <table border="1">
+        <tr>
+            <th>Complain ID</th>
+            <th>Tag Name</th>
+        </tr>
+    {% for t in complainTag %}
+        <tr>
+            <td>{{ t.complain }}</td>
+            <td>{{ t.tag }}</td>
+        </tr>
+
+    {% endfor %}
+    </table>
 
 
+    {% endblock content %}
 
 </body>
 </html>

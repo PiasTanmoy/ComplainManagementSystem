@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from Student import views as student_view
 from Complain import views as complain_view
+from Tag import views as tag_views
 
 
 urlpatterns = [
@@ -24,5 +25,7 @@ urlpatterns = [
     path('showTable/', student_view.showTables),
     path('studentForm/', student_view.studentForm),
     path('complainForm/', complain_view.complainForm),
-    path('commentForm/', complain_view.commentForm)
+    path('commentForm/', complain_view.commentForm),
+    path('tagForm/', tag_views.insertTag),
+    path('complainTagForm/', tag_views.insertComplainTag)
 ]
