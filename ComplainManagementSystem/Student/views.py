@@ -1,18 +1,23 @@
 from django.shortcuts import render
 from .models import Student
 from .studentForm import StudentForm
+from Complain.models import Complain,Comment
 # Create your views here.
 
 
 def showTables(request):
 
     studentTable = Student.objects.all()
+    complainTable = Complain.objects.all()
+    commentTable = Comment.objects.all()
 
     context = {
-        'studentTable':studentTable
+        'studentTable': studentTable,
+        'complainTable': complainTable,
+        'commentTable': commentTable,
     }
 
-    return render(request,'showTables.html',context)
+    return render(request, 'showTables.html', context)
 
 
 def studentForm(request):

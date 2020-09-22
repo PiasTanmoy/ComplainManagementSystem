@@ -23,11 +23,54 @@
             <td>{{ s.password}}</td>
         </tr>
     {% endfor %}
+
+    </table>
+    <br><br><br><br><br>
+
+
+    <h1>Complain Table</h1>
+    <table border="1">
+        <tr>
+           <th>Student</th>
+           <th>Image</th>
+           <th>Status</th>
+           <th>Description</th>
+           <th>Type</th>
+           <th>Date</th>
+           <th>Time</th>
+        </tr>
+    {% for s in complainTable%}
+        <tr>
+            <td>{{ s.student }}</td>
+            <td>{{ s.image }}</td>
+            <td>{{ s.status }}</td>
+            <td>{{ s.description }}</td>
+            <td>{{ s.type}}</td>
+            <td>{{ s.date }}</td>
+            <td>{{ s.time}}</td>
+        </tr>
+    {% endfor %}
+
     </table>
 
+    <br><br><br><br><br>
 
+    <h1>Comment Table</h1>
+    <table border="1">
+        <tr>
+           <th>Complain_ID</th>
+           <th>User Name</th>
+           <th>Description</th>
+        </tr>
+    {% for s in commentTable%}
+        <tr>
+            <td>{{ s.complain }}</td>
+            <td>{{ s.student }}</td>
+            <td>{{ s.description }}</td>
+        </tr>
+    {% endfor %}
 
-
+    </table>
 
 {% endblock content %}
 

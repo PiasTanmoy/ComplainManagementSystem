@@ -5,9 +5,9 @@ import datetime
 # Create your models here.
 class Complain(models.Model):
     image = models.ImageField(blank=True)
-    status = models.CharField(max_length=100, choices=(('1', 'Approved'), ('2', 'Not Approved'), ('3', 'Pending')), default='1')
+    status = models.CharField(max_length=100, choices=(('Approved', 'Approved'), ('Not Approved', 'Not Approved'), ('Not Approved', 'Pending')), default='Approved')
     description = models.TextField()
-    type = models.CharField(max_length=100, choices=(('1', 'General'), ('2', 'Departmental'), ('3', 'Both')), default='1')
+    type = models.CharField(max_length=100, choices=(('General', 'General'), ('Departmental', 'Departmental'), ('Both', 'Both')), default='General')
     date = models.DateField(auto_now=True)
     time = models.TimeField(auto_now=True)
 
@@ -16,6 +16,13 @@ class Complain(models.Model):
     def __str__(self):
         return str(self.id) + ' : ' + self.student.user_name
 
+class Comment(models.Model):
+    complain = models.ForeignKey(Complain, on_delete=models.CASCADE)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
 
+    description = models.TextField()
+
+    def __str__(self):
+        return str(self.complain.id) + ':' + self.student.user_name
 
 
