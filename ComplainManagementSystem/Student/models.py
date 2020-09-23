@@ -5,7 +5,7 @@ from django.db import models
 
 class Student(models.Model):
 
-    user_name = models.CharField(max_length=100,unique=True,null=True)
+    user_name = models.CharField(max_length=100,unique=True)
     email = models.EmailField(unique=True)
     department = models.CharField(max_length=100,blank=True)
     password = models.CharField(max_length=100)
