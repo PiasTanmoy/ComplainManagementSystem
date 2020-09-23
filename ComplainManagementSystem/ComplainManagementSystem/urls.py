@@ -30,6 +30,6 @@ urlpatterns = [
     path('voteForm/', complain_view.voteForm),
     path('tagForm/', tag_views.insertTag),
     path('complainTagForm/', tag_views.insertComplainTag),
-    path('infoForm/',infocontac_views.infoForm),
-    path('faqForm/',infocontac_views.faqForm)
+    path('infoForm/', infocontac_views.infoForm),
+    path('faqForm/', infocontac_views.faqForm)
 ]
