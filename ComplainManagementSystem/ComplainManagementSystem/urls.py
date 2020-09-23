@@ -18,6 +18,7 @@ from django.urls import path
 from Student import views as student_view
 from Complain import views as complain_view
 from Tag import views as tag_views
+from InfoNContact import views as infoconatc_views
 
 
 urlpatterns = [
@@ -28,5 +29,7 @@ urlpatterns = [
     path('commentForm/', complain_view.commentForm),
     path('voteForm/', complain_view.voteForm),
     path('tagForm/', tag_views.insertTag),
-    path('complainTagForm/', tag_views.insertComplainTag)
+    path('complainTagForm/', tag_views.insertComplainTag),
+    path('infoForm/',infoconatc_views.InfoForm),
+    path('faqForm/',infoconatc_views.FaqForm)
 ]
