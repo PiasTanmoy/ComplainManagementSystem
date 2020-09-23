@@ -3,6 +3,7 @@ from .models import Student
 from .studentForm import StudentForm
 from Complain.models import Complain,Comment,Vote
 from Tag.models import Tag, ComplainTag
+from InfoNContact.models import FAQ,Info
 # Create your views here.
 
 
@@ -14,6 +15,9 @@ def showTables(request):
     voteTable = Vote.objects.all()
     tagTable = Tag.objects.all()
     complainTag = ComplainTag.objects.all()
+    faqTable = FAQ.objects.all()
+    infoTable = Info.objects.all()
+
 
 
     context = {
@@ -22,7 +26,9 @@ def showTables(request):
         'commentTable': commentTable,
         'votTable': voteTable,
         'tagTable': tagTable,
-        'complainTag': complainTag
+        'complainTag': complainTag,
+        'faqTable': faqTable,
+        'infoTable': infoTable,
     }
 
     return render(request, 'showTables.html', context)
