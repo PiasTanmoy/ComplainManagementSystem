@@ -19,17 +19,19 @@ from Student import views as student_view
 from Complain import views as complain_view
 from Tag import views as tag_views
 from InfoNContact import views as infocontac_views
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('showTable/', student_view.showTables),
-    path('studentForm/', student_view.studentForm),
-    path('complainForm/', complain_view.complainForm),
-    path('commentForm/', complain_view.commentForm),
-    path('voteForm/', complain_view.voteForm),
-    path('tagForm/', tag_views.insertTag),
-    path('complainTagForm/', tag_views.insertComplainTag),
-    path('infoForm/', infocontac_views.infoForm),
-    path('faqForm/', infocontac_views.faqForm)
-]
+    path('showTable/', student_view.showTables, name='showTable'),
+    path('studentForm/', student_view.studentForm, name='studentForm'),
+    path('complainForm/', complain_view.complainForm, name='complainForm'),
+    path('commentForm/', complain_view.commentForm, name='commentForm'),
+    path('voteForm/', complain_view.voteForm, name='voteForm'),
+    path('tagForm/', tag_views.insertTag, name='tagForm'),
+    path('complainTagForm/', tag_views.insertComplainTag, name='complainTagForm'),
+    path('infoForm/', infocontac_views.infoForm, name='infoForm'),
+    path('faqForm/', infocontac_views.faqForm, name='faqForm')
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

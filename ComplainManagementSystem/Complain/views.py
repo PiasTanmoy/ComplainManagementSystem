@@ -9,7 +9,7 @@ def complainForm(request):
     msg = ''
 
     if request.method == 'POST':
-        complain_form = ComplainForm(request.POST)
+        complain_form = ComplainForm(request.POST, request.FILES)
         msg = 'Invalid input'
 
         if complain_form.is_valid():

@@ -4,7 +4,7 @@ import datetime
 
 # Create your models here.
 class Complain(models.Model):
-    image = models.ImageField(blank=True)
+    image = models.ImageField(upload_to='complain/image/', blank=True)
     status = models.CharField(max_length=100, choices=(('Approved', 'Approved'), ('Not Approved', 'Not Approved'), ('Not Approved', 'Pending')), default='Approved')
     description = models.TextField()
     type = models.CharField(max_length=100, choices=(('General', 'General'), ('Departmental', 'Departmental'), ('Both', 'Both')), default='General')

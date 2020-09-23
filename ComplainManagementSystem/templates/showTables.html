@@ -1,11 +1,6 @@
 {% extends 'base.html' %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% load static %}
+
 {% block content %}
 
     <h1>Student Table</h1>
@@ -43,7 +38,7 @@
     {% for s in complainTable%}
         <tr>
             <td>{{ s.student }}</td>
-            <td>{{ s.image }}</td>
+            <td><img src="{{ s.image.url }}" width="300px" height="250px"></td>
             <td>{{ s.status }}</td>
             <td>{{ s.description }}</td>
             <td>{{ s.type}}</td>
@@ -173,5 +168,3 @@
 
     {% endblock content %}
 
-</body>
-</html>
